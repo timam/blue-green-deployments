@@ -1,3 +1,5 @@
+# This example demonstrates a Rollout using the blue-green update strategy, which contains a manual
+# gate before promoting the new stack.
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
@@ -33,3 +35,29 @@ spec:
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
       autoPromotionEnabled: false
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: rollout-bluegreen-active
+spec:
+  selector:
+    app: rollout-bluegreen
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: rollout-bluegreen-preview
+spec:
+  selector:
+    app: rollout-bluegreen
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
