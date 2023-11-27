@@ -83,13 +83,13 @@ spec:
         paths:
           - backend:
               service:
-                name: rollout-bluegreen-active
+                name: rollout-bluegreen-preview
                 port:
                   number: 8080
             pathType: ImplementationSpecific
           - backend:
               service:
-                name: rollout-bluegreen-preview
+                name: rollout-bluegreen-active
                 port:
                   number: 8080
             pathType: ImplementationSpecific
