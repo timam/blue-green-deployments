@@ -32,5 +32,15 @@ minikube service argocd-server -n argocd
 
 ##run the following command to access argo rollouts##
 minikube service argo-rollouts-dashboard -n argocd
+
+##run the following command to enable ingress-nginx##
+minikube addons enable ingress
+
+##command to run minikube tunnel##
+minikube tunnel
+
+##dont forget to add proper hostname on /etc/hosts##
 EOF
 }
+
+
