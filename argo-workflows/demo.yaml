@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: timam/canary-poc:003
+          image: timam/canary-poc:004
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
