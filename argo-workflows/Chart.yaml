@@ -7,5 +7,5 @@ version: 1.0.0
 
 dependencies:
   - name: bg-deployment
-    version: "1.0.3"
-    repository: "file://charts/bg-deployment-1.0.3.tgz"
+    version: "1.0.4"
+    repository: "file://charts/bg-deployment-1.0.4.tgz"

@@ -75,7 +75,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/security-groups: sg-0aa6c158c9b4a6638
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
-    alb.ingress.kubernetes.io/conditions.rollout-bluegreen-preview: '[{"field":"http-header", "httpHeaderConfig": {"httpHeaderName": "User-Agent", "values":["Firefox"]}}]'
+    alb.ingress.kubernetes.io/conditions.rollout-bluegreen-preview: '[{"field":"http-header", "httpHeaderConfig": {"httpHeaderName": "User-Agent", "values":["*Firefox*"]}}]'
 spec:
   rules:
     - host: rollout.dev.medlify.com
