@@ -1,2 +1,2 @@
 bg-deployment:
-  docker_image_tag: "v1.0.0"
+  docker_image_tag: "v1.0.1"
