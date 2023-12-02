@@ -1,1 +1,2 @@
-docker_image: "timam/canary-poc"
+bg-deployment:
+  docker_image: "timam/canary-poc"

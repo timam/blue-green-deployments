@@ -1,1 +1,2 @@
-docker_image_tag: "006"
+bg-deployment:
+  docker_image_tag: "006"
