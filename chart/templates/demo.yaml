@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: timam/canary-poc:005
+          image: {{ .Values.docker_image }}:{{ .Values.docker_image_tag }}
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

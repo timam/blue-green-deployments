@@ -1,0 +1,11 @@
+apiVersion: v2
+name: demo
+description: A Helm chart for demo
+
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: bg-deployment
+    version: "1.0.3"
+    repository: "file://charts/bg-deployment-1.0.3.tgz"
